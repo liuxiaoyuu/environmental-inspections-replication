@@ -1,0 +1,15 @@
+case,model,term,beta,se,N,r2
+unweighted,col1,announcement,-0.233,0.073,42309,0.766
+unweighted,col1,onsite,-0.524,0.093,42309,0.766
+unweighted,col1,post,-0.295,0.1,42309,0.766
+unweighted,col4,announcement,-0.209,0.074,42309,0.768
+unweighted,col4,onsite,-0.503,0.094,42309,0.768
+unweighted,col4,post_1_5,-0.409,0.095,42309,0.768
+unweighted,col4,post_6_10,-0.158,0.11,42309,0.768
+weighted,col2,announcement,-0.191,0.092,31582,0.739
+weighted,col2,onsite,-0.427,0.107,31582,0.739
+weighted,col2,post,-0.229,0.109,31582,0.739
+weighted,col5,announcement,-0.178,0.093,31582,0.741
+weighted,col5,onsite,-0.417,0.107,31582,0.741
+weighted,col5,post_1_5,-0.313,0.111,31582,0.741
+weighted,col5,post_6_10,-0.135,0.119,31582,0.741

@@ -1,0 +1,41 @@
+name: Verify reproducibility
+on:
+  push:
+    paths-ignore:
+      - 'README.md'
+      - 'README_ZH.md'
+      - 'RESULTS_ZH.md'
+      - 'docs/DETAILS.md'
+      - 'docs/ENVIRONMENT.md'
+  pull_request:
+    paths-ignore:
+      - 'README.md'
+      - 'README_ZH.md'
+      - 'RESULTS_ZH.md'
+      - 'docs/DETAILS.md'
+      - 'docs/ENVIRONMENT.md'
+  workflow_dispatch:
+    inputs:
+      full_data_run:
+        description: Download pinned author inputs and run full analysis
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  numerical-checks:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.6.0'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: Rscript setup.R
+      - run: python3 code/check_project.py
+      - run: Rscript code/test_model.R
+      - if: github.event_name == 'workflow_dispatch' && inputs.full_data_run
+        run: python3 run.py
+# No raw data are uploaded as CI artifacts.

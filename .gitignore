@@ -1,0 +1,30 @@
+# Local inputs and materials; never include these in the public source bundle.
+data/raw/
+private_sources/
+.runtime/
+renv/library/
+renv/staging/
+renv/local/
+renv/cellar/
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+Rplots.pdf
+__pycache__/
+*.pyc
+.DS_Store
+*.part
+*.log
+public_release/
+dist/
+
+# Regenerable intermediates (produced by run.py; not needed in the lean pack)
+results/all_deletion_estimates.csv
+results/inference_sensitivity.csv
+results/inference_comparison.png
+results/sample_audit.json
+results/sessionInfo.txt
+results/reproduction_validation.json
+results/extension_run.json
+results/extension_validation.csv

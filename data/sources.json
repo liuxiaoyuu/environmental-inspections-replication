@@ -1,0 +1,24 @@
+{
+  "dataset_doi": "10.7910/DVN/AXWNCY",
+  "version": "2.0",
+  "license": "CC0-1.0",
+  "verified_date": "2026-10-28",
+  "files": [
+    {
+      "case": "unweighted",
+      "filename": "campaign_all_10wk_nt.dta",
+      "url": "https://dataverse.harvard.edu/api/access/datafile/6952736?format=original",
+      "bytes": 23584110,
+      "md5": "877c1e5df5090b7b25e1000b37478bd8",
+      "sha256": "88499d304756927bab32cf72d1f2fd66eaf09ba345074a6a34c3657da082753d"
+    },
+    {
+      "case": "weighted",
+      "filename": "campaign_all_10wk_match_nt.dta",
+      "url": "https://dataverse.harvard.edu/api/access/datafile/6952745?format=original",
+      "bytes": 23936560,
+      "md5": "c8b6813611c3d5dc49a88d1e0ad749e3",
+      "sha256": "769990985efc19c644cea54a673a112dfbef08e3f339725e3aba41d1141d8fc4"
+    }
+  ]
+}
